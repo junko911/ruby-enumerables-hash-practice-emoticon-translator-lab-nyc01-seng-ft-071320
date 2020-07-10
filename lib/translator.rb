@@ -2,8 +2,13 @@ require 'yaml'
 require 'pry'
 
 def load_library
-  list = YAML.load_file('lib/emoticons.yml')
-  list
+  emoticons = {}
+  YAML.load_file('lib/emoticons.yml').each { |meaning, faces|
+    emoticons[meaning] = {
+      :english => faces[0],
+      :japanese => faces[1]
+  }
+  emoticons
 end
 
 def get_japanese_emoticon
