@@ -16,7 +16,7 @@ def get_japanese_emoticon(library, emoticon)
   load_library(library).each_value { |pairs|
     pairs.each_value { |face|
       if face == emoticon
-        return pairs[1]
+        return pairs[:japanese]
       end
     }
   }
