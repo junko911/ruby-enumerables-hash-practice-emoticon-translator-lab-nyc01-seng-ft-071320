@@ -22,7 +22,7 @@ def get_english_meaning(library, emoticon)
       return meaning if face == emoticon
     }
   }
-  
+  "Sorry, that emoticon was not found"
 end
 
 # binding.pry
