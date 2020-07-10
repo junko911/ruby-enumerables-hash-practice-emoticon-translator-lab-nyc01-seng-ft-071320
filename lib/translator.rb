@@ -22,6 +22,7 @@ def get_english_meaning(library, emoticon)
       return meaning if face == emoticon
     }
   }
+  
 end
 
 # binding.pry
