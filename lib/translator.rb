@@ -3,7 +3,8 @@ require 'pry'
 
 def load_library
   emoticons = {}
-  YAML.load_file('lib/emoticons.yml').each { |meaning, faces|
+  data = YAML.load_file('lib/emoticons.yml')
+  data.each { |meaning, faces|
     emoticons[meaning] = {
       :english => faces[0],
       :japanese => faces[1]
