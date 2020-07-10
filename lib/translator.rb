@@ -13,15 +13,15 @@ def load_library(library)
 end
 
 def get_japanese_emoticon(library, emoticon)
+
+end
+
+def get_english_meaning(library, emoticon)
   load_library(library).each { |meaning, pairs|
     pairs.each_value { |face| 
       return meaning if face == emoticon
     }
   }
-end
-
-def get_english_meaning(library, emoticon)
-  
 end
 
 # binding.pry
